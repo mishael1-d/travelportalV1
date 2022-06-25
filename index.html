@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
   <link href="images/faviconnew.png" rel="icon" />
   <title>Hovapay Travels</title>
-  <meta name="description" content="Flights,htoels and travel booking agency website">
+  <meta name="description" content="Flights,hotels and travel booking agency website">
   <meta name="author" content="kdtex technologies">
 
 <!-- Web Fonts
@@ -21,6 +21,7 @@
   <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 <body>
   <!-- Preloader -->
@@ -39,7 +40,7 @@
             
           <!-- Logo
             ============================================= -->
-            <div class="logo"> <a href="index.html" title="Hovapay travels"><img src="images/logonew.png" alt="Quickai" width="127" height="29" /></a> </div>
+            <div class="logo"> <a href="index.html" title="Hovapay travels"><img src="images/logo1.png" alt="Quickai" width="127" height="29" /></a> </div>
             <!-- Logo end --> 
             
           </div>
@@ -145,7 +146,7 @@
                       <li>
                         <div class="dropdown-mega-content">
                           <div class="row">
-                            <div class="col-lg"> <span class="sub-title">Hotels</Span>
+                            <div class="col-lg"> <span class="sub-title">Flights/Span>
                               <ul class="dropdown-mega-submenu">
                                 <li><a class="dropdown-item" href="booking-hotels.html">Home Layout 1</a></li>
                                 <li><a class="dropdown-item" href="booking-hotels-2.html">Home Layout 2</a></li>
@@ -154,7 +155,7 @@
                                 <li><a class="dropdown-item" href="booking-hotels-details.html">Hotel Details</a></li>
                               </ul>
                             </div>
-                            <div class="col-lg"> <span class="sub-title">Flights</Span>
+                            <div class="col-lg"> <span class="sub-title">Hotels</Span>
                               <ul class="dropdown-mega-submenu">
                                 <li><a class="dropdown-item" href="booking-flights.html">Home Layout 1</a></li>
                                 <li><a class="dropdown-item" href="booking-flights-2.html">Home Layout 2</a></li>
@@ -263,20 +264,20 @@
     <div id="content">
       <div class="hero-wrap py-2 py-md-3 py-lg-5">
         <div class="hero-mask opacity-3 bg-dark"></div>
-        <div class="hero-bg" style="background-image:url('./images/bg/image-2.jpg');"></div>
+        <div class="hero-bg" style="background-image:url('./images/bg/bg2.jpg');"></div>
         <div class="hero-content py-3 py-lg-5 my-3 my-md-5">
           <div class="container">
             <!-- Tabs --> 
             <ul class="nav nav-tabs style-2" id="myTab" role="tablist">
-              <li class="nav-item"> <a class="nav-link active" id="hotels-tab" data-toggle="tab" href="#hotels" role="tab" aria-controls="hotels" aria-selected="true">Hotels</a> </li>
-              <li class="nav-item"> <a class="nav-link" id="flights-tab" data-toggle="tab" href="#flights" role="tab" aria-controls="flights" aria-selected="true">Flights</a> </li>
+              <li class="nav-item"> <a class="nav-link active" id="flights-tab" data-toggle="tab" href="#flights" role="tab" aria-controls="flights" aria-selected="true">Flights</a> </li>
+              <li class="nav-item"> <a class="nav-link" id="hotels-tab" data-toggle="tab" href="#hotels" role="tab" aria-controls="hotels" aria-selected="true">Hotels</a> </li>
            <!--  <li class="nav-item"> <a class="nav-link" id="trains-tab" data-toggle="tab" href="#trains" role="tab" aria-controls="trains" aria-selected="false">Trains</a> </li>
             <li class="nav-item"> <a class="nav-link" id="bus-tab" data-toggle="tab" href="#bus" role="tab" aria-controls="bus" aria-selected="false">Bus</a> </li> -->
           </ul>
           <div class="tab-content bg-light shadow-md rounded rounded-top-0 px-4 pt-4 pb-2" id="myTabContent"> 
             
             <!-- Search Hotels -->
-            <div class="tab-pane fade show active" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
+            <div class="tab-pane fade" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
               <h2 class="text-4 mb-3">Book Domestic and International Hotels</h2>
               <form id="bookingHotels" method="post">
                 <div class="form-row">
@@ -353,7 +354,7 @@
                     </form>
                   </div>
                   <!-- Search Flight -->
-                  <div class="tab-pane fade" id="flights" role="tabpanel" aria-labelledby="flights-tab">
+                  <div class="tab-pane fade show active" id="flights" role="tabpanel" aria-labelledby="flights-tab">
                     <h2 class="text-4 mb-3">Book Domestic and International Flights</h2>
                     <form id="bookingFlight" method="post">
                       <div class="mb-3">
@@ -528,6 +529,7 @@
       ============================================= -->
       <section class="bg-light shadow-md">
         <div class="row no-gutters banner ">
+          <div class="owl-carousel owl-theme container">
           <div class="col-sm-6 col-lg-3">
             <div class="item"> <a href="#">
               <div class="caption">
@@ -563,6 +565,7 @@
                     </div>
                     <div class="banner-mask"></div>
                     <img class="img-fluid" src="images/slider/small-banner-15-600x320.jpg" alt="banner"> </a> </div>
+                  </div>
                   </div>
                 </div>
               </section>
@@ -1380,6 +1383,27 @@
     $('#busDepart').val(chosen_date.format('MM-DD-YYYY'));
   });
 });
+// Owl-carousel
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+})
 </script> 
 <script src="js/theme.js"></script>
 </body>

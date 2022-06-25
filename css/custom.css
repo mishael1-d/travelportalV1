@@ -5,6 +5,55 @@
 	Overwriting Default Theme Styles for Better Hanlding Updates
 -----------------------------------------------------------------*/
 
+/* =================================== */
+/*  Active Navbar Link
+/* =================================== */
+.primary-menu ul.navbar-nav > li:hover > a,
+.primary-menu ul.navbar-nav > li.active > a {
+  color: #0e3c6e;
+}
+
+/* =================================== */
+/*  Tabs Section
+/* =================================== */
+.nav-tabs.style-2 .nav-item .nav-link.active,
+.nav-tabs.style-2 .nav-item .nav-link:hover.active {
+  background-color: #0e3c6e !important;
+}
+.nav-tabs.style-2 {
+  background: none !important;
+}
+.nav-tabs.style-2 .nav-item .nav-link {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* =================================== */
+/*  Tab Submit Button
+/* =================================== */
+.btn-primary {
+  background-color: #0e3c6e;
+  border-color: #0e3c6e;
+}
+
+/* =================================== */
+/*  Tab Radio Input
+/* =================================== */
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #0e3c6e !important;
+  border-color: #0e3c6e;
+}
 
 
-
+/* =================================== */
+/*  Adjusted Img Container for Carousel
+/* =================================== */
+@media (min-width: 992px) {
+  .col-lg-3 {
+    max-width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .col-sm-6 {
+    max-width: 100%;
+  }
+}
